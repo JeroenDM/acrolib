@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="acrolib",
-    version="0.0.1",
+    version="0.0.3",
     author="Jeroen De Maeyer",
     author_email="jeroen.demaeyer@kuleuven.be",
     description="General utilities for my robotics research at ACRO.",
@@ -16,6 +16,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/JeroenDM/acrolib",
     packages=find_packages(where="src"),
+    install_requires=["cython", "numpy", "pyquaternion"],
     include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
