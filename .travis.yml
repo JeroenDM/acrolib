@@ -14,10 +14,6 @@ python:
 
 env:
   global:
-    # List package dependencies for conda
-    - CONDA_DEPS="pytest pytest-cov numpy"
-    # dependencies not available with conda
-    - PIP_DEPS="pyquaternion cython"
     # package name for test invocation
     - PACKAGENAME="acrolib"
 
@@ -33,8 +29,7 @@ before_install:
 - conda info -a
 - conda create -n testenv python=$TRAVIS_PYTHON_VERSION
 - source activate testenv
-- conda install $CONDA_DEPS
-- pip install $PIP_DEPS
+- pip install -r requirements.txt
 
 install:
 - python setup.py build_ext --inplace
