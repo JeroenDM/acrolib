@@ -15,7 +15,7 @@ python:
 env:
   global:
     # List package dependencies for conda
-    - CONDA_DEPS="pytest numpy"
+    - CONDA_DEPS="pytest pytest-cov numpy"
     # dependencies not available with conda
     - PIP_DEPS="pyquaternion cython"
     # package name for test invocation
@@ -41,4 +41,4 @@ install:
 - python setup.py install
 
 script:
-- pytest
+- pytest --cov=$PACKAGENAME
