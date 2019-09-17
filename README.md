@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/JeroenDM/acrolib.svg?branch=master)](https://travis-ci.org/JeroenDM/acrolib) [![codecov](https://codecov.io/gh/JeroenDM/acrolib/branch/master/graph/badge.svg)](https://codecov.io/gh/JeroenDM/acrolib)
+
 # Acrolib
 
 General utilities for writing motion planning algorithms at [ACRO](https://iiw.kuleuven.be/onderzoek/acro).
