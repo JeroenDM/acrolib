@@ -7,6 +7,12 @@ First install cython, wich `setup.py` needs to build the package.
 pip install cython
 ```
 
+In some cases you also have to install additional dependencies.
+```bash
+sudo apt install python3-dev
+pip install wheel
+```
+
 ## Using pip
 Then install the package.
 ```bash
