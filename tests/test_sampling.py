@@ -2,7 +2,7 @@ import pytest
 import numpy as np
 
 from numpy.testing import assert_almost_equal
-from acrolib.sampling import Sampler, SampleMethod
+from acrolib.sampling import Sampler, SampleMethod, next_prime
 
 
 def assert_in_range(x, lower=0, upper=1):
@@ -58,3 +58,42 @@ class TestSampler:
         s = Sampler()
         samples = s.sample(1000, 3, method=SampleMethod.deterministic_uniform)
         assert len(samples) == 1000
+
+
+PRIMES = [
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61,
+    67,
+    71,
+    73,
+    79,
+    83,
+    89,
+    97,
+    101,
+    103,
+    107,
+    109,
+    113,
+]
+
+
+def test_next_prime():
+    prime_factory = next_prime()
+    for prime in PRIMES:
+        assert next(prime_factory) == prime
