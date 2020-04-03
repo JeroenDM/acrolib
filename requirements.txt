@@ -1,5 +1,6 @@
 cython
 numpy
+matplotlib
 pyquaternion
 pytest
 pytest-cov
