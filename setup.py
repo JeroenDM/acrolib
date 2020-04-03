@@ -11,7 +11,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="acrolib",
-    version="0.0.6",
+    version="0.0.7",
     author="Jeroen De Maeyer",
     author_email="jeroen.demaeyer@kuleuven.be",
     description="General utilities for my robotics research at ACRO.",
